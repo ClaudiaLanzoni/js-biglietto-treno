@@ -1,14 +1,33 @@
-
 let kmDesiderati = parseInt(prompt("Quanti km desidera percorrere?"));
 
-//tentativo per ripetere alert finchè non viene inserito numero corretto
-/*do {
-       alert ("Si prega di digitare un numero corretto");
-       } while (Number.isNaN(kmDesiderati));
-} else {
-    kmDesiderati
+//primo tentativo per ripetere alert finchè non viene inserito numero corretto
+
+while(Number.isNaN(kmDesiderati)) {
+    alert ("Si prega di digitare un numero corretto");
+    kmDesiderati = parseInt(prompt("Quanti km desidera percorrere?"));
+}
+
+// secondo tentativo per ripetere alert finchè non viene inserito numero corretto
+/*
+for(;Number.isNaN(kmDesiderati);) { //finché la condizione Number.isNaN(kmDesiderati) = true il ciclo continua a ripetersi
+    alert ("Si prega di digitare un numero corretto");
+    kmDesiderati = parseInt(prompt("Quanti km desidera percorrere?"));
 }
 */
+
+// terzo tentativo per ripetere alert finchè non viene inserito numero corretto
+
+/*
+let kmDesideratiIsANumber = true;
+
+while(!kmDesideratiIsANumber) {
+    if(Number.isNaN(kmDesiderati)) {
+        alert ("Si prega di digitare un numero corretto");
+        kmDesiderati = parseInt(prompt("Quanti km desidera percorrere?"));
+    }
+}
+*/
+
 
 let etàPasseggero = parseInt(prompt("Quanti anni ha?"));
 
